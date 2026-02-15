@@ -18,7 +18,7 @@ def load_model():
         model = joblib.load("tourism_model.pkl")
     except:
         # OPTION 2: Download from HF Hub (Update repo_id)
-        REPO_ID = "asurajpai/visit-with-us-model" 
+        REPO_ID = "asurajpai/visit-with-us-app" 
         FILENAME = "tourism_model.pkl"
         model_path = hf_hub_download(repo_id=REPO_ID, filename=FILENAME)
         model = joblib.load(model_path)
