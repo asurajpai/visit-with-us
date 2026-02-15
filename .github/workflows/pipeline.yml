@@ -46,9 +46,10 @@ jobs:
           HF_TOKEN: ${{ secrets.HF_TOKEN }}
           # Using the username found in your error log
           HF_USERNAME: "asurajpai"
-          SPACE_NAME: "visit-with-us-model"
+          SPACE_NAME: "visit-with-us-app"
         run: |
           git config --global user.email "actions@github.com"
           git config --global user.name "GitHub Actions"
           # The syntax below uses the token explicitly with the username
+          # We ensure we are pushing to the 'spaces' endpoint
           git push https://$HF_USERNAME:$HF_TOKEN@huggingface.co/spaces/$HF_USERNAME/$SPACE_NAME main --force
