@@ -1,6 +1,6 @@
 ---
 title: Visit With Us
-emoji: ":airplane:"
+emoji: "✈️"
 colorFrom: "blue"
 colorTo: "green"
 sdk: "streamlit"
