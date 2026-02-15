@@ -75,6 +75,10 @@ input_data = pd.DataFrame({
     'MonthlyIncome': [monthly_income]
 })
 
+# Fix for the Unnamed: 0 error
+if 'Unnamed: 0' not in input_data.columns:
+    input_data.insert(0, 'Unnamed: 0', 0)
+
 if st.button("Predict Purchase"):
     # Note: Pipeline handles imputation/encoding automatically
     prediction = model.predict(input_data)[0]
